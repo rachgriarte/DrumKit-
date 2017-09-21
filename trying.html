@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Test Carousel</title>
+        <title>Bootstrap Example</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+          nav {
+            background-color: yellow;
+          }
+          </style>
+    </head>
+    <body>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+    <br><br><br><br>
+          </center>
+            <!-- Carousel  -->
+            <center>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Slide One-->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img style="width: 10%;" src="images/icons/nextup-icon.png" />
+                        <h1 id="title"><b>NextUp</b>Music</h1>
+                        <p id="tagline">Pick. Queue. Play.</p>
+                    </div>
+                    <!-- Slide Two -->
+                    <div class="item">
+                        <img src="images/screenshots/mockup.png" height="200">
+                        <p class="short-description">NextUp Music is a social jukebox app that allows you to queue music with the people around you to the same speaker. It eliminates the need to pass the aux and allows you to use the music service of your choosing.</p>
+                    </div>
+                    <!-- SLide 3 -->
+                    <div class="item">
+                      <!-- Download App -->
+                        <h3>Download our Apps</h3>
+                        <br/>
+                        <a href="https://itunes.apple.com/us/app/nextup-music-stop-passing-the-aux/id1242132000">
+                          <!--
+                          <object class="download-badge" data="images/app-store-badge.svg" type="image/svg+xml">
+                            -->
+                            <img src="images/badges/app-store-badge.png" />
+                            <!--
+                          </object>
+                          -->
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nextup.music">
+                          <!--
+                          <object class="download-badge" data="images/google-play-badge.svg" type="image/svg+xml">
+                            -->
+                            <img src="images/badges/google-play-badge.png" />
+                            <!--
+                          </object>
+                          -->
+                        </a>
+                        <!-- Join A Party -->
+                        <div class="content-block coming-soon">
+                            <h3>Join a Party</h3>
+                            <p id="no-app-required">(No app required!)</p>
+                            <input disabled="disabled" id="id" type="text" placeholder="Party ID">
+                            <input disabled="disabled" id="submit" type="submit" value="Go!">
+                          </div>
+                        </div>
+                      </center>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            </center>
+            <!-- Carousel Ends -->
+          <footer class="footer">
+            <center>
+              <div>
+                <div class="footer-column">
+                  <a href="about"><p>About</p></a>
+                </div>
+                <div class="footer-column">
+                  <a href="#"><p>Legal</p></a>
+                </div>
+                <div class="footer-column">
+                  <a href="contact"><p>Contact</p></a>
+                </div>
+              <!-- </div> -->
+            </div>
+            </center>
+          </footer>
+        </body>
+        
