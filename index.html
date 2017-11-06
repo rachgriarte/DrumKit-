@@ -1,60 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rachel's Drum Kit</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Play A Beat!</h1>
-        <!-- Keyboard -->
-    <div class="keys">
-        <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-        <kbd>S</kbd>
-        <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-        <kbd>D</kbd>
-        <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-        <kbd>F</kbd>
-        <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-        <kbd>J</kbd>
-        <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-        <kbd>L</kbd>
-        <span class="sound">tink</span>
-        </div>
-    </div>
-    <!-- Audio -->
-    <audio data-key="65" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/kick.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/boom.wav"></audio>
-    <audio data-key="72" src="sounds/ride.wav"></audio>
-    <audio data-key="74" src="sounds/snare.wav"></audio>
-    <audio data-key="75" src="sounds/tom.wav"></audio>
-    <audio data-key="76" src="sounds/tink.wav"></audio>
-    </body>
+<!doctype html>
+<html>
+<head>
+<title>NextUp Music</title>
+	<meta charset="UTF-8">
+	<!-- Bootstrap CDN -->
+	<link rel="icon" href="../favicon.ico"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--<script src="../jquery.js" type="text/javascript"></script>-->
+</head>
+<body>
+<!-- Top Info -->
+<div id="topInfoContainer">
+	<table>
+		<tr>
+			<td id="iconImg"><img src="../images/indexV2Assets/nextUpLogo.png" width="80px" height="50px"></img><h2>NextUp Music</h2></td>
+			<!-- <td><h1>Party Search</h1></td> -->
+			<td><h5 id="userName" style="float: right; padding-left: 20px;"><i class="glyphicon glyphicon-user"></i>  Rach</h5></td> 
+		</tr>
+	</table>
+</div>
+<!-- Fixed background - Ad goes here -->
+<div class="fixed-bg">
+</div>
+<!-- Left Panel -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-2" id="leftPanel" class="mainPanel">
+		<div class="leftPanelStuff" >
+			<ul>
+				<p><button id="joinPartyButton">Join</button></p>
+				<p><a href="partyHostSetup.html">Host</a></p>
+				<p><a href="https://itunes.apple.com/us/app/nextup-music-stop-passing-the-aux/id1242132000?mt=8">Download iOS</a></p>
+				<p><a href="https://play.google.com/store/apps/details?id=com.nextup.music">Download Android</a></p>
+				<p><a href="https://www.facebook.com/NextUpMusicApp/">Share</a></p>
+				<p><a href="aboutUs.html">About NextUp</a></p>
+				<p><a href="feedback.html">Contact Us</a></p>
+			</ul>
+		</div>
+	</div>
+	<!-- Center Panel -->
+	<h1 style="color: #7825BE; text-shadow: 1px 1px #000000; display:inline-block; margin-right: 130px;">Party Search</h1>
+	<div"col-md-10" id="centerPanel" class="mainPanel">
+		<input type="search" placeholder="Search Parties" id="searchbar">
+		<select id="filterContent">
+			<option value="null">Sort by...</option>
+			<option value="Members"> Members</option>
+			<option value="Distance"> Distance</option>
+		</select>
+		<button type="button" id="reloadContent">
+				<span class="glyphicon glyphicon-refresh"></span>
+			</button>
+		<ul id="partyList">
+			<!--This is where you append the party names-->
+		</ul>
+	</div>
+	</div>
+</div>
+<!-- right Panel
+<div id="rightPanel" class="mainPanel">
+	<div class="rightPanelStuff" id="searchHolder">
+		<form>
+		</form>
+	</div>
+	<div class="rightPanelStuff" id="hostHolder">
+	</div>
+</div> -->
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDkPJuhQ43beodBbyfRfjHsC9E4wgLUYUw",
+    authDomain: "nextup-edc16.firebaseapp.com",
+    databaseURL: "https://nextup-edc16.firebaseio.com",
+    projectId: "nextup-edc16",
+    storageBucket: "nextup-edc16.appspot.com",
+    messagingSenderId: "500748556610"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="/__/firebase/4.1.3/firebase-app.js"></script>
+<script src="/__/firebase/4.1.3/firebase-auth.js"></script>
+<script src="/__/firebase/4.1.3/firebase-database.js"></script>
+<script src="/__/firebase/4.1.3/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="/__/firebase/4.1.3/firebase-storage.js"></script> -->
+
+<script src="/__/firebase/init.js"></script>
+<script src="../jscript/landingPage.js" ></script>
+
 </html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<title>NextUp Music - Contact</title>
+   <meta charset="UTF-8">
+   <!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/feedback.css" />
+  <link rel="icon" href="https://nextupmusic.org/images/icons/nextup-icon.png" />
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="nav-bar">
+  <a href="landingPage.html">
+  <img src="../images/indexV2Assets/nextUpLogo.png" width="50px" height="35px" style="padding:2px"></img></a>
+  <a id= "navlist" href="partyHostSetup.html">Host</a>
+  <a id= "navlist" href="aboutUs.html">About NextUp</a> 
+  <a id= "navlist" href="feedback.html">Contact Us</a>
+  <a id= "navlist" href="https://itunes.apple.com/us/app/nextup-music-stop-passing-the-aux/id1242132000?mt=8">Download iOS</a> 
+  <a id= "navlist" href="https://play.google.com/store/apps/details?id=com.nextup.music">Download Android</a> 
+  <a id= "navlist" href="https://www.facebook.com/NextUpMusicApp/">Share</a> 
+  <button id="joinPartyButton">Join</button> 
+</div>
+<div class="empty"></div>
+<!-- Have a complaint? -->
+<p class="wide-description">
+  <b>Have a complaint or problem?</b>
+  <i>Feel free to message or email us with your problem.</i><br><br>
+  <b>Have an idea on how the app could be better?</b>
+  <i>All ideas and complaints are welcomed.</i><br><br>
+  <b>Thank you for your interest!</b>
+</p>
+<!-- Feedback -->
+<center>
+<!-- Social Media Links -->
+<a href="https://www.facebook.com/NextUpMusicApp/">
+  <img id="facebook" src="../images/social/fb-logo.png" alt="Facebook" height="50px" width="50px"/>
+</a>
+<a href="https://twitter.com/NextUpMusicApp">
+  <img id="twitter" src="../images/social/twitter-logo.png" alt="Twitter" height="50px" width="50px"/>
+</a>
+<a href="mailto:mailto:nick@nextupmusic.org?Subject=NextUp%20Music%20Feedback">
+  <img id="email" src="../images/social/email-logo.png" alt="Email" height="55px" width="55px"/>
+</a> 
+  <div id="centerPanel">
+    <h3 style="text-shadow: 4px 4px #541E83;">Feedback</h3>
+    <form>
+      <input type="text" name="Name" placeholder="Name"><br>
+      <input type="text" name="Email" placeholder="Email (optional)"><br>
+      <input type="text" name="Subject" placeholder="Subject"><br>
+      <textarea name="Comments" placeholder="Comments..."></textarea><br>
+      <button type="submit" name="Submit">Submit Feedback</button>
+    </form>
+  </div>
+</center>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDkPJuhQ43beodBbyfRfjHsC9E4wgLUYUw",
+    authDomain: "nextup-edc16.firebaseapp.com",
+    databaseURL: "https://nextup-edc16.firebaseio.com",
+    projectId: "nextup-edc16",
+    storageBucket: "nextup-edc16.appspot.com",
+    messagingSenderId: "500748556610"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="/__/firebase/4.1.3/firebase-app.js"></script>
+<script src="/__/firebase/4.1.3/firebase-auth.js"></script>
+<script src="/__/firebase/4.1.3/firebase-database.js"></script>
+<script src="/__/firebase/4.1.3/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="/__/firebase/4.1.3/firebase-storage.js"></script> -->
+
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>

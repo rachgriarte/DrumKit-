@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gilroy-light';
+  src: url('fonts/gilroy-light-webfont.woff2') format('woff2'),
+       url('fonts/gilroy-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  /*font-family: 'Open Sans', sans-serif;*/
+  background: linear-gradient(#FFFFFF, #380C55);
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+/* Navigation Bar */
+.nav-bar {
+  background-color: #3D0F63;
+  position: fixed;
+  width:100%;
+  text-align: center;
+  padding: 5px;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+#navlist {
+  color: #BDBDBD;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+#navlist:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#joinPartyButton {
+  background: #3D0F63;
+  color: #BDBDBD;
+  padding: 0px 5px;
+}
+.empty {
+  padding: 50px;
+}
+/* Have a complaint? */
+.wide-description {
+  text-align: center;
+  font-size: 1.5vw;
+  color: #000000;
+}
+/* Social Media Links */
+#facebook, #twitter, #email {
+  margin: 20px 5px;
+}
+/* Feedback */
+#centerPanel{
+  background: rgba(90, 83, 83, 0.4);
+  border-radius: 5%;
+  width: 50%;
+  height:55vh;
+  color: #FFFFFF;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+#centerPanel form{
+  margin: 0vh 10vh;
+  color: black;
+  font-size: 1vw;
+}
+input[type="text"]{ /* input name, email, subject text box */
+  width: 40vw;
+  height:5vh;
+  margin:1vh;
+  text-align: left;
+}
+input::-webkit-input-placeholder { font-size: 1vw; color: grey; }
+input::-moz-placeholder { font-size: 1vw; color: grey; }
+input:-ms-input-placeholder { font-size: 1vw; color: grey; }
+input:-moz-placeholder { font-size: 1vw; color: grey; }
+
+textarea{ /* comment text box */
+  width:40vw;
+  height:10vh;
+  margin:1vh;
+}
+textarea::-webkit-input-placeholder { font-size: 1vw; color: grey; }
+textarea::-moz-placeholder { font-size: 1vw; color: grey; }
+textarea:-ms-input-placeholder { font-size: 1vw; color: grey; }
+textarea:-moz-placeholder { font-size: 1vw; color: grey; }
+
+button{ /* submit button */
+  width: 10vw;
+  height:5vh;
+  font-size: 1vw;
+  margin:1vh;
+}
